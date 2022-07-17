@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 const path = require('path')
 const Controller = require('./controllers/controller')
 
@@ -27,4 +27,4 @@ app.get('/frpstptank', Controller.frpstptank)
 app.get('/gallery', Controller.gallery)
 
 
-app.listen(process.env.PORT || 5000)
+app.listen(port, () => console.log(`aplikasi berjalan di port ${port}`))
