@@ -27,6 +27,4 @@ app.get('/frpstptank', Controller.frpstptank)
 app.get('/gallery', Controller.gallery)
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(process.env.PORT || 5000)
